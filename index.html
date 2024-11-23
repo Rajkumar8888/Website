@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reselling unused items by Rajkumar">
+    <meta name="keywords" content="Resell, Rajkumar, Unused Items, Buy">
+    <meta name="author" content="Rajkumar">
+    <title>Rajkumar's Resell Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+            border-bottom: 1px solid #ddd;
+        }
+        .product-name {
+            font-size: 1rem;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product-price {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .buy-now {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .buy-now:hover {
+            background-color: #218838;
+        }
+    </style>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100%;
+            max-height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+        }
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #34495e;
+        }
+        .product-price {
+            font-size: 1rem;
+            color: #16a085;
+        }
+        .buy-now {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .buy-now:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            width: 100%;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    </head>
+    
+<body>
+    <h1>Rajkumar's Products</h1>
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="egg.jpg" alt="Egg Boiler">
+            <div class="product-name">Egg Boiler</div>
+            <div class="product-price">₹900</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="tripod.jpg" alt="Tripod">
+            <div class="product-name">Tripod</div>
+            <div class="product-price">₹800</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="hairdryer.jpg" alt="Hair Dryer">
+            <div class="product-name">Hair Dryer</div>
+            <div class="product-price">₹300</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="ringlight.jpg" alt="Ring Light">
+            <div class="product-name">Ring Light</div>
+            <div class="product-price">₹1000</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="shoes.jpg" alt="Shoes">
+            <div class="product-name">Shoes</div>
+            <div class="product-price">₹199</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="oildis.jpg" alt="Oil Dispenser">
+            <div class="product-name">Oil Dispenser</div>
+            <div class="product-price">₹110</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="whiteboard.jpg" alt="Whiteboard">
+            <div class="product-name">Whiteboard</div>
+            <div class="product-price">₹300</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="cskjersey.jpg" alt="Csk Jersey">
+            <div class="product-name">Csk Jersey</div>
+            <div class="product-price">₹500</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="book.jpg" alt="Book">
+            <div class="product-name">'You belong with me'</div>
+            <div class="product-price">₹250</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="hdmivga.jpg" alt="HDMI to VGA">
+            <div class="product-name">HDMI to VGA Convertor</div>
+            <div class="product-price">₹250</div>
+            <a href="https://wa.link/yj7lxz" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Rajkumar's Resell Shop | <a href="https://wa.link/yj7lxz">Contact Us</a></p>
+    </footer>
+    </body>
+    
+</html>
