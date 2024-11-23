@@ -6,7 +6,7 @@
     <meta name="description" content="Reselling unused items by Rajkumar">
     <meta name="keywords" content="Resell, Rajkumar, Unused Items, Buy">
     <meta name="author" content="Rajkumar">
-    <title>Rajkumar's Products</title>
+    <title>Raj's Product Showcase</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -19,6 +19,8 @@
             flex-direction: column;
             background: linear-gradient(to right, #e0f7fa, #ffffff);
             color: #333;
+            width: 100%; /* Use the full width */
+            box-sizing: border-box;
         }
         h1 {
             text-align: center;
@@ -31,14 +33,14 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 20px;
-            width: 100%; /* Added to use the full width */
+            width: 100%; /* Use the full width */
         }
         .search-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
-            width: 100%; /* Added to use the full width */
+            width: 100%; /* Use the full width */
         }
         .search-bar input {
             width: 35%;
@@ -66,7 +68,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted to use the full width */
             gap: 10px;
-            width: 100%; /* Added to use the full width */
+            width: 100%; /* Use the full width */
         }
         .product-card {
             background: #fff;
@@ -129,7 +131,7 @@
             color: white;
             margin-top: 20px;
             font-size: 1rem;
-            width: 100%; /* Added to use the full width */
+            width: 100%; /* Use the full width */
         }
         #imageModal {
             display: none;
@@ -156,9 +158,9 @@
             font-size: 30px;
             cursor: pointer;
         }
-    
+
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .search-bar {
                 flex-direction: column;
                 align-items: stretch;
@@ -169,15 +171,24 @@
                 width: 100%;
                 margin-bottom: 10px;
             }
+        }
+
+        @media (max-width: 768px) {
+            .products {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller columns for tablets */
+            }
+            .product-card img {
+                max-height: 80px; /* Reduced image height for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
             .products {
                 grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smaller columns for mobile view */
             }
             .product-card img {
                 max-height: 80px; /* Reduced image height for mobile */
             }
-        }
-    
-        @media (max-width: 480px) {
             .product-card h3 {
                 font-size: 1rem; /* Smaller font size for mobile */
             }
@@ -190,10 +201,8 @@
                 font-size: 0.7rem; /* Smaller font size for mobile */
             }
         }
+        
     </style>
-    
-    
-    
     <script>
         function zoomImage(event) {
             var modal = document.getElementById('imageModal');
@@ -247,7 +256,7 @@ document.getElementById('sortOptions').addEventListener('change', applySort);
     </script>
 </head>
 <body>
-    <h1>Rajkumar's Products</h1>
+    <h1>Raj's Product Showcase</h1>
     <div class="container">
         <div class="search-bar">
             <input type="text" placeholder="Search for products..." onkeyup="showSuggestions(this.value)">
@@ -261,20 +270,18 @@ document.getElementById('sortOptions').addEventListener('change', applySort);
                 <option value="home">Home Appliances</option>
                 <option value="kitchen">Kitchen Items</option>
             </select>
-            <button onclick="applySort()" class="search-button">Search</button> <!-- Added search button with class -->
+            <button onclick="applySort()" class="search-button">Search</button>
         </div>
         <div id="suggestions" style="margin-bottom: 20px;"></div>
-        
-        
-        <div id="suggestions" style="margin-bottom: 20px;"></div>
         <div class="products">
+            <!-- Include your product cards here -->
             <div class="product-card" data-price="900">
                 <img src="egg.jpg" alt="Egg Boiler">
                 <h3>Egg Boiler</h3>
                 <p>Efficient boiler for your morning eggs.</p>
                 <div class="price">₹900</div>
                 <div class="free-delivery">Free Delivery</div>
-                <a href="https://wa.link/yj7lxz" target="_blank"><button>Buy Now</button></a> <!-- Updated button -->
+                <a href="https://wa.link/yj7lxz" target="_blank"><button>Buy Now</button></a>
             </div>
             <div class="product-card" data-price="800">
                 <img src="tripod.jpg" alt="Tripod">
@@ -282,8 +289,9 @@ document.getElementById('sortOptions').addEventListener('change', applySort);
                 <p>Sturdy tripod for all your photography needs.</p>
                 <div class="price">₹800</div>
                 <div class="free-delivery">Free Delivery</div>
-                <a href="https://wa.link/yj7lxz" target="_blank"><button>Buy Now</button></a> <!-- Updated button -->
+                <a href="https://wa.link/yj7lxz" target="_blank"><button>Buy Now</button></a>
             </div>
+            
             <div class="product-card" data-price="300">
                 <img src="hairdryer.jpg" alt="Hair Dryer">
                 <h3>Hair Dryer</h3>
