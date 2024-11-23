@@ -269,12 +269,20 @@ document.getElementById('sortOptions').addEventListener('change', applySort);
 
 
 // Search suggestions function
-        function showSuggestions(value) {
-            const suggestions = document.getElementById('suggestions');
-            const data = ['Egg Boiler', 'Tripod', 'Hair Dryer', 'Ring Light', 'Shoes', 'Oil Dispenser', 'Whiteboard', 'CSK Jersey', 'Book', 'HDMI to VGA'];
-            const filtered = data.filter(item => item.toLowerCase().includes(value.toLowerCase()));
-            suggestions.innerHTML = filtered.map(item => `<div>${item}</div>`).join('');
-        }
+function showSuggestions(value) {
+    const suggestions = document.getElementById('suggestions');
+    const data = ['Egg Boiler', 'Tripod', 'Hair Dryer', 'Ring Light', 'Shoes', 'Oil Dispenser', 'Whiteboard', 'CSK Jersey', 'Book', 'HDMI to VGA'];
+    
+    // Clear suggestions if input is empty
+    if (value.trim() === '') {
+        suggestions.innerHTML = '';
+        return;
+    }
+    
+    const filtered = data.filter(item => item.toLowerCase().includes(value.toLowerCase()));
+    suggestions.innerHTML = filtered.map(item => `<div>${item}</div>`).join('');
+}
+
     </script>
 </head>
 <body>
