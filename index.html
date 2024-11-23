@@ -66,24 +66,27 @@
         }
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted to use the full width */
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted to use the full width */
+            gap: 20px; /* Added gap between products */
             width: 100%; /* Use the full width */
         }
         .product-card {
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 10px;
+            padding: 15px; /* Increased padding */
             text-align: center;
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .product-card:hover {
             transform: translateY(-5px);
         }
         .product-card img {
             width: 100%;
-            max-height: 100px;
+            max-height: 150px; /* Adjusted image height */
             object-fit: contain;
             border-bottom: 2px solid #ddd;
             cursor: pointer;
@@ -93,14 +96,17 @@
             transition: transform 0.2s;
         }
         .product-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.4rem; /* Adjusted font size */
             margin: 10px 0;
             color: #2f4f4f;
         }
         .product-card p {
-            font-size: 0.9rem;
+            font-size: 1rem; /* Adjusted font size */
             color: #666;
             margin: 10px 0;
+            max-height: 40px; /* Set max height for description */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
         }
         .product-card .price {
             color: #b22222;
@@ -109,17 +115,17 @@
         }
         .product-card .free-delivery {
             color: green;
-            font-size: 0.8rem;
+            font-size: 0.9rem; /* Adjusted font size */
             margin-bottom: 10px;
         }
         .product-card button {
-            padding: 5px 10px;
+            padding: 10px 20px; /* Adjusted padding */
             background-color: #556b2f;
             color: white;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 0.8rem;
+            font-size: 1rem; /* Adjusted font size */
         }
         .product-card button:hover {
             background-color: #6b8e23;
@@ -158,7 +164,7 @@
             font-size: 30px;
             cursor: pointer;
         }
-
+    
         /* Responsive Design */
         @media (max-width: 1024px) {
             .search-bar {
@@ -171,38 +177,54 @@
                 width: 100%;
                 margin-bottom: 10px;
             }
+            .products {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller columns for tablets */
+            }
         }
-
+    
         @media (max-width: 768px) {
             .products {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller columns for tablets */
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller columns for mobile view */
             }
             .product-card img {
-                max-height: 80px; /* Reduced image height for tablets */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .products {
-                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smaller columns for mobile view */
-            }
-            .product-card img {
-                max-height: 80px; /* Reduced image height for mobile */
+                max-height: 120px; /* Adjusted image height for mobile */
             }
             .product-card h3 {
-                font-size: 1rem; /* Smaller font size for mobile */
+                font-size: 1.2rem; /* Adjusted font size for mobile */
             }
             .product-card p {
-                font-size: 0.8rem; /* Smaller font size for mobile */
+                font-size: 0.9rem; /* Adjusted font size for mobile */
+                max-height: 35px; /* Adjusted max height for description */
             }
             .product-card .price,
             .product-card .free-delivery,
             .product-card button {
-                font-size: 0.7rem; /* Smaller font size for mobile */
+                font-size: 0.9rem; /* Adjusted font size for mobile */
             }
         }
-        
+    
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller columns for smaller mobile view */
+            }
+            .product-card img {
+                max-height: 100px; /* Adjusted image height for smaller mobile view */
+            }
+            .product-card h3 {
+                font-size: 1rem; /* Smaller font size for smaller mobile view */
+            }
+            .product-card p {
+                font-size: 0.8rem; /* Smaller font size for smaller mobile view */
+                max-height: 30px; /* Adjusted max height for description */
+            }
+            .product-card .price,
+            .product-card .free-delivery,
+            .product-card button {
+                font-size: 0.7rem; /* Smaller font size for smaller mobile view */
+            }
+        }
     </style>
+    
     <script>
         function zoomImage(event) {
             var modal = document.getElementById('imageModal');
@@ -256,7 +278,7 @@ document.getElementById('sortOptions').addEventListener('change', applySort);
     </script>
 </head>
 <body>
-    <h1>Raj's Product Showcase</h1>
+    <h1>Rajkumar's Products</h1>
     <div class="container">
         <div class="search-bar">
             <input type="text" placeholder="Search for products..." onkeyup="showSuggestions(this.value)">
